@@ -1,0 +1,16 @@
+wget https://github.com/glpi-project/glpi-agent/releases/download/1.11/glpi-agent_1.11-1_all.deb
+
+sudo apt --fix-broken install -y
+
+sudo dpkg -i glpi-agent_1.11-1_all.deb
+
+glpi-agent --version
+
+sudo vim /etc/glpi-agent/agent.cfg
+   server = http://3.234.216.69/front/inventory.php     >>add this line
+
+sudo vim /etc/glpi-agent/inventory-server-plugin.cfg
+         [inventory]
+     server = http://3.234.216.69/front/inventory.php   >>add this line
+
+sudo systemctl restart glpi-agent.service
