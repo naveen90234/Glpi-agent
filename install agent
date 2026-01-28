@@ -14,3 +14,6 @@ sudo vim /etc/glpi-agent/inventory-server-plugin.cfg
      server = http://3.234.216.69/front/inventory.php   >>add this line
 
 sudo systemctl restart glpi-agent.service
+
+sudo glpi-agent --force
+
