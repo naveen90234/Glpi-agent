@@ -17,3 +17,7 @@ sudo systemctl restart glpi-agent.service
 
 sudo glpi-agent --force
 
+
+
+***If chrome not working hit this cmd 
+rm -f ~/.config/google-chrome/Singleton*
